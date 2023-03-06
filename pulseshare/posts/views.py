@@ -3,8 +3,12 @@ from django.shortcuts import render
 
 
 def home(request):
-    return HttpResponse('Главная страница')
+    context = {
+    }
+    return render(request, 'posts/home.html', context)
 
 
 def group_posts(request, slug):
-    return HttpResponse('Список мороженого')
+    context = {
+    }
+    return render(request, 'posts/group_list.html', context)
